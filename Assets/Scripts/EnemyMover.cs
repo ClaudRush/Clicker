@@ -23,16 +23,15 @@ public class EnemyMover : MonoBehaviour
         set { _board = value; }
     }
 
+    private void Start()
+    {
+        transform.localPosition = GetRandomPosition();
+        transform.parent = _board;
+    }
     private void Update()
     {
         Move();
     }
-
-    private void Start()
-    {
-        transform.localPosition = GetRandomPosition();
-    }
-
     private void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, _nextPosition, Time.deltaTime *_speed);

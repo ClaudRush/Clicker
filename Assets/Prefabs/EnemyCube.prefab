@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8734862837795372458}
   - component: {fileID: 8734862837795372459}
   - component: {fileID: 8734862837795372468}
-  - component: {fileID: 8734862837795372463}
+  - component: {fileID: 7296776596173980991}
   m_Layer: 0
   m_Name: EnemyCube
   m_TagString: Untagged
@@ -109,8 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb0873b041c4d64c86512fed0ab3750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _board: {fileID: 0}
---- !u!114 &8734862837795372463
+--- !u!114 &7296776596173980991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,6 +118,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8734862837795372469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8ee99cf13c83c74884430b162906695, type: 3}
+  m_Script: {fileID: 11500000, guid: 05d43b26db9f7ed4b9c649de0f749a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
