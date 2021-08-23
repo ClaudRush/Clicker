@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ClickHandler : MonoBehaviour
 {
-    [SerializeField] private EnemyFactory _enemyFactory;
-    private int _clickDamage = 1;
+    [SerializeField] private Board _board;
+    [SerializeField] private int _clickDamage;
 
     void Update()
     {
@@ -21,13 +21,11 @@ public class ClickHandler : MonoBehaviour
             if (enemy != null)
             {
                 enemy.ApplyDamage(_clickDamage);
+
                 if (enemy.IsDead())
                 {
-                    _enemyFactory.RemoveEnemy(enemy);
-                    _enemyFactory.DeadEnemiesCount++;
-                    _enemyFactory.EnemyKill?.Invoke();
+                    _board.RemoveEnemy(enemy);
                 }
-                
             }
         }
     }

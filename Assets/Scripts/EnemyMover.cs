@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMover : MonoBehaviour
@@ -7,14 +5,13 @@ public class EnemyMover : MonoBehaviour
     private const float CLAMP_DISTANCE = 0.2f;
 
     private Vector3 _nextPosition;
-
-    private Transform _board;//Стоит убрать если есть свойтва? 
-    private float _speed;//
+    private Transform _board;
+    private float _speed;
 
     public float Speed 
     {
         get { return _speed; } 
-        set { _speed = value > 0 ? _speed = value : throw new System.ArgumentOutOfRangeException(); }
+        set { _speed = value; }
     }
 
     public Transform Board 
@@ -28,10 +25,12 @@ public class EnemyMover : MonoBehaviour
         transform.localPosition = GetRandomPosition();
         transform.parent = _board;
     }
+
     private void Update()
     {
         Move();
     }
+
     private void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, _nextPosition, Time.deltaTime *_speed);
